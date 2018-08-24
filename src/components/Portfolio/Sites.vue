@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-layout v-layout align-center justify-space-between row>
+    <v-layout align-center justify-space-around row>
       <v-flex v-for="design in designList" :key="design.id" xs3>
         <v-card>
           <v-card-media
@@ -36,11 +36,13 @@
   export default {
     data () {
       return {
-        designList: [
-          {id: '1', title: 'Car site', description: 'this is my first job with design'},
-          {id: '2', title: 'Car site', description: 'this is my first job with design'},
-          {id: '3', title: 'Car site', description: 'this is my first job with design'}
-        ]
+        pageName: 'Design'
+      }
+    },
+    computed: {
+      designList () {
+        console.log(this.$store.getters.getSites)
+        return this.$store.getters.getSites
       }
     }
   }

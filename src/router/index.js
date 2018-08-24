@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Design from '@/components/Portfolio/Design'
 import Sites from '@/components/Portfolio/Sites'
 import Other from '@/components/Portfolio/Other'
+import AddWork from '@/components/Portfolio/AddWork'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/portfolio/other',
       name: 'Other',
       component: Other
+    },
+    {
+      path: '/portfolio/add',
+      name: 'Add Work',
+      component: AddWork
     }
   ],
   mode: 'history'

@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import { store } from './store'
 import router from './router'
 import firebase from 'firebase'
 import Vuetify from 'vuetify'
@@ -15,15 +16,19 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
   created () {
-    firebase.initializeApp({
+    var config = {
       apiKey: 'AIzaSyArfwYlGh2L3P9dQrLz0acM4dIzEsIo_n8',
       authDomain: 'yaroslav-hromovyi-portfolio.firebaseapp.com',
       databaseURL: 'https://yaroslav-hromovyi-portfolio.firebaseio.com',
       projectId: 'yaroslav-hromovyi-portfolio',
-      storageBucket: 'gs://yaroslav-hromovyi-portfolio.appspot.com'
-    })
+      storageBucket: 'yaroslav-hromovyi-portfolio.appspot.com',
+      messagingSenderId: '201624409075'
+    }
+    firebase.initializeApp(config)
+    this.$store.dispatch('fetchPortfolio')
   }
 })

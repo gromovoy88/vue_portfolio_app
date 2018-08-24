@@ -45,7 +45,8 @@
       paths: [
         {id: 1, name: 'Design', link: '/portfolio/design', icon: 'stars'},
         {id: 2, name: 'Sites', link: '/portfolio/sites', icon: 'code'},
-        {id: 3, name: 'Other', link: '/portfolio/other', icon: 'explore'}
+        {id: 3, name: 'Other', link: '/portfolio/other', icon: 'explore'},
+        {id: 4, name: 'Add Work', link: '/portfolio/add', icon: 'explore'}
       ]
     }),
     props: {
