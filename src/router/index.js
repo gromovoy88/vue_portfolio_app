@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import Design from '@/components/portfolio/Design'
-import Sites from '@/components/portfolio/Sites'
-import Other from '@/components/portfolio/Other'
+import Design from '@/components/Portfolio/Design'
+import Sites from '@/components/Portfolio/Sites'
+import Other from '@/components/Portfolio/Other'
 
 Vue.use(Router)
 

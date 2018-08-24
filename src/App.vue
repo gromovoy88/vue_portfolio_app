@@ -18,8 +18,9 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar color="cyan" dark fixed app>
-      <v-spacer></v-spacer>
+
       <v-toolbar-title>{{this.appName}}</v-toolbar-title>
+      <v-spacer></v-spacer>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
     <v-content>
